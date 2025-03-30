@@ -1,0 +1,42 @@
+[
+    {
+        "author": "Mark Twain",
+        "price": 0,
+        "category": "Free",
+        "image": "https://cdn.kobo.com/book-images/931cff10-8266-4630-a29a-96f338e9dcd3/1200/1200/False/the-adventures-of-tom-sawyer-113.jpg",
+        "title": "The Adventures of Tom Sawyer",
+        "description": "A classic coming-of-age novel about a mischievous boy growing up along the Mississippi River."
+    },
+    {
+        "author": "Mary Shelley",
+        "price": 0,
+        "category": "Free",
+        "image": "https://m.media-amazon.com/images/I/81z+qeG22gL._SL1500_.jpg",
+        "title": "Frankenstein",
+        "description": "A timeless gothic horror novel about the consequences of playing god and creating life."
+    },
+    {
+        "author": "Charlotte Brontë",
+        "price": 0,
+        "category": "Free",
+        "image": "https://tse4.mm.bing.net/th?id=OIP.HxY7KwxNhXzvkQfYRA1ypgHaLW&pid=Api&P=0&h=180",
+        "title": "Jane Eyre",
+        "description": "A powerful novel about a young woman's struggle for independence and love."
+    },
+    {
+        "author": "Oscar Wilde",
+        "price": 0,
+        "category": "Free",
+        "image": "https://tse3.mm.bing.net/th?id=OIP.JgvQ_CoiIsC02j1djnkraAHaLH&pid=Api&P=0&h=180",
+        "title": "The Picture of Dorian Gray",
+        "description": "A dark tale of vanity, moral corruption, and a portrait that ages while its subject remains young."
+    },
+    {
+        "author": "Arthur Conan Doyle",
+        "price": 0,
+        "category": "Free",
+        "image": "https://tse4.mm.bing.net/th?id=OIP.MWmWlOUVEnNgcZOpEp14WgHaLx&pid=Api&P=0&h=180",
+        "title": "A Study in Scarlet",
+        "description": "The first novel in the Sherlock Holmes series, introducing the brilliant detective and his friend Dr. Watson."
+    }
+]

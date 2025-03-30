@@ -12,7 +12,6 @@ export default function AuthProvider({ children }) {
         }
     };
 
-    // State for authentication user
     const [authUser, setAuthUser] = useState(getInitialUser);
   return (
     <AuthContext.Provider value={[authUser, setAuthUser]}>

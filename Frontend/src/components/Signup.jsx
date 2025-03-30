@@ -1,7 +1,6 @@
 import React from 'react'
-import { Link, Navigate } from 'react-router-dom'
+import { Link, Navigate, useNavigate } from 'react-router-dom'
 import { useForm } from 'react-hook-form'
-import Login from './Login'
 import axios from 'axios'
 function Signup() {
     const {
@@ -9,6 +8,7 @@ function Signup() {
         handleSubmit,
         formState: { errors },
     } = useForm();
+    const navigate = useNavigate()
     
     const onSubmit = async (data) => {
         const userInfo = {
@@ -21,9 +21,10 @@ function Signup() {
             console.log(res.data)
             if(res.data){
                 alert("Signup successfull");
-                <Navigate to="/" />
+                localStorage.setItem("Users",JSON.stringify(res.data.user))
+                navigate("/");
+                window.location.reload()
             }
-            localStorage.setItem("Users",JSON.stringify(res.data.user))
         })
         .catch((err) => {
             if(err.response){
@@ -38,8 +39,9 @@ function Signup() {
             <div className='flex h-screen items-center justify-center'>
                 <div id="my_modal_4" className="modal modal-open">
                     <div className="modal-box dark:bg-slate-900 dark:text-white">
+                        
                         <form onSubmit={handleSubmit(onSubmit)} method="dialog">
-                            {/* if there is a button in form, it will close the modal */}
+
                             <Link to={'/'} className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</Link>
 
                             <h3 className="font-bold text-lg">SignUp</h3>
@@ -82,9 +84,11 @@ function Signup() {
                             <div className='flex justify-around mt-4'>
                                 <button className='bg-pink-500 text-white rounded-full px-2 py-1 cursor-pointer hover:bg-pink-700 duration-300'>SignUp</button>
                                 <p>Have account?
-                                    <button onClick={() => document.getElementById("my_modal_3").showModal()} className='underline text-blue-500 cursor-pointer'> Login</button>
+                                    <Link to={'/login'} 
+                                        className='underline text-blue-500 cursor-pointer'>
+                                        Login
+                                    </Link>
                                 </p>
-                                <Login />
                             </div>
                         </form>
                     </div>

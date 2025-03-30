@@ -3,22 +3,34 @@ import Card from './Card'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
 
-function Course() {
+function Book() {
+
+    const allCategories = ['Fantasy','Science Fiction','Free','Mystery','Romance','Thriller']
 
     const [book,setBook] = useState([])
+    const [categories,setCategories] = useState([])
 
     useEffect(()=>{
-        const getBook = async () => {
-            try {
-                const res = await axios.get("http://localhost:4001/book")
-                console.log(res.data)
-                setBook(res.data)
-            } catch (error) {
-                console.log(error)
-            }
-        };
-        getBook();
-    },[]);
+        fetchBooks()
+    },[categories])
+
+    const fetchBooks = async () => {
+        try {
+            let query = categories.length > 0 ? `?category=${categories.join(",")}` : ""
+            const res = await axios.get(`http://localhost:4001/book${query}`)
+            setBook(res.data)
+        } catch (error) {
+            console.log(error)
+        }
+    }
+
+    const handleCategoryChange = (category) => {
+        setCategories((prev) =>
+            prev.includes(category)
+                ? prev.filter((c) => c !== category)
+                : [...prev, category]
+        );
+    };
 
     return (
         <>
@@ -37,6 +49,21 @@ function Course() {
                         </button>
                     </Link>
                 </div>
+
+                <div className="flex gap-4 mt-6">
+                    {allCategories.map((category) => (
+                        <label key={category} className="flex items-center space-x-2">
+                            <input
+                                type="checkbox"
+                                value={category}
+                                checked={categories.includes(category)}
+                                onChange={() => handleCategoryChange(category)}
+                            />
+                            <span>{category}</span>
+                        </label>
+                    ))}
+                </div>
+
                 <div className='mt-10 grid grid-cols-1 md:grid-cols-4'>
                     {
                         book.map((item) => (
@@ -49,4 +76,4 @@ function Course() {
     )
 }
 
-export default Course
+export default Book

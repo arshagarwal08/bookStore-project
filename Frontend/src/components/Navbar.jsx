@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
-import Login from './Login';
 import { useAuth } from '../context/AuthProvider';
 import Logout from './Logout';
+import { Link } from 'react-router-dom';
 
 function Navbar() {
     const [authUser, setAuthUser] = useAuth()
@@ -40,9 +40,9 @@ function Navbar() {
     const navItems = (
         <>
             <li><a href='/'>Home</a></li>
-            <li><a href='/course'>Course</a></li>
+            <li><a href='/book'>Books</a></li>
             <li><a href='/contact'>Contact</a></li>
-            <li><a>About</a></li>
+            <li><a href='/about'>About</a></li>
         </>
     )
     return (
@@ -61,7 +61,7 @@ function Navbar() {
                                 {navItems}
                             </ul>
                         </div>
-                        <a className="text-2xl font-bold cursor-pointer">bookStore</a>
+                        <a className="text-2xl font-bold cursor-pointer">bookVerse</a>
                     </div>
                     <div className="navbar-end dark:bg-slate-900 dark:text-white space-x-3">
                         <div className="navbar-center hidden lg:flex">
@@ -104,11 +104,11 @@ function Navbar() {
                         {
                             authUser ? (<Logout />) : (
                                 <div>
-                                    <a onClick={() => document.getElementById("my_modal_3").showModal()} className="bg-black text-white rounded-md px-3 py-2 cursor-pointer hover:bg-slate-800 duratoin-300">
-                                        Login
-                                    </a>
-                                    <Login />
-                                </div>
+                                <Link to={'/login'}
+                                    className="bg-black text-white rounded-md px-3 py-2 cursor-pointer hover:bg-slate-800 duratoin-300">
+                                    Login
+                                </Link>
+                            </div>
                             )
                         }
                     </div>
