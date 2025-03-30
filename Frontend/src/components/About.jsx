@@ -11,10 +11,14 @@ function About() {
                 <div className='pt-28 items-center justify-center text-center'>
                     <h1 className='text-2xl font-semibold md:text-4xl'>
                         About
-                        <span className='text-pink-500'> us :)</span>
+                        <span className='text-pink-500'> bookVerse :)</span>
                     </h1>
-                    <p className='my-8'>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe ea nisi sunt at. Minima assumenda vero sunt iure et quas! Deserunt accusamus ipsam voluptas magnam natus voluptatem velit, fuga voluptatibus, nam consequatur consequuntur error corrupti rerum quas unde pariatur illum laudantium perspiciatis commodi! Cupiditate corrupti fuga, accusantium reiciendis soluta odit consequuntur voluptatibus totam quaerat excepturi ea voluptatum repellat numquam nesciunt aliquid, hic consequatur aperiam ab dolorum, in ex. Ex, fuga aliquam mollitia unde illum, est aspernatur laborum corporis laboriosam deleniti harum soluta nemo distinctio quaerat reprehenderit! Vel aliquid doloremque laudantium maxime corrupti iusto. Delectus maiores nobis sequi, odit provident quod!
+                    <p className='my-14 text-lg'>
+                    Welcome to BookVerse, your ultimate destination for book lovers!
+                    <br/><br/>
+                    Whether you're a passionate reader, a curious learner, or someone looking for the perfect book, we’ve got something for you. Our mission is to provide a seamless and enjoyable book-browsing experience, offering a wide range of genres, including fiction, fantasy, romance, mystery, and even free educational resources.
+                    <br/>
+                    At BookVerse, we believe in the power of stories and knowledge. We are committed to bringing readers closer to their next great read while making books more accessible to everyone. Explore, discover, and dive into the world of books with us! 📖🌍
                     </p>
                     <Link to='/'>
                         <button className='bg-pink-500 text-white px-4 py-2 rounded-full hover:bg-pink-700 duration-300 cursor-pointer'>

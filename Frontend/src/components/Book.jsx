@@ -37,11 +37,13 @@ function Book() {
             <div className='dark:bg-slate-900 dark:text-white max-w-screen-2xl container mx-auto md:px-20 px-4'>
                 <div className='pt-28 items-center justify-center text-center'>
                     <h1 className='text-2xl font-semibold md:text-4xl'>
-                        We are delighted to have you
-                        <span className='text-pink-500'> here :)</span>
+                    Explore Our Vast Collection of
+                        <span className='text-pink-500'> Books :)</span>
                     </h1>
-                    <p className='my-8'>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe ea nisi sunt at. Minima assumenda vero sunt iure et quas! Deserunt accusamus ipsam voluptas magnam natus voluptatem velit, fuga voluptatibus, nam consequatur consequuntur error corrupti rerum quas unde pariatur illum laudantium perspiciatis commodi! Cupiditate corrupti fuga, accusantium reiciendis soluta odit consequuntur voluptatibus totam quaerat excepturi ea voluptatum repellat numquam nesciunt aliquid, hic consequatur aperiam ab dolorum, in ex. Ex, fuga aliquam mollitia unde illum, est aspernatur laborum corporis laboriosam deleniti harum soluta nemo distinctio quaerat reprehenderit! Vel aliquid doloremque laudantium maxime corrupti iusto. Delectus maiores nobis sequi, odit provident quod!
+                    <p className='my-8 text-xl'>
+                        Welcome to the bookVerse, where you can browse through a diverse collection of books across multiple genres! Whether you love fantasy, romance, mystery, science fiction, or non-fiction, we have something for every reader.
+                        Use our category filter to easily find books that match your interest—simply check the genres you love, and we’ll show you the best selections. Looking for free books? We’ve got those too!
+                        Start exploring now and find your next great read! 
                     </p>
                     <Link to='/'>
                         <button className='bg-pink-500 text-white px-4 py-2 rounded-full hover:bg-pink-700 duration-300 cursor-pointer'>
@@ -50,9 +52,9 @@ function Book() {
                     </Link>
                 </div>
 
-                <div className="flex gap-4 mt-6">
+                <div className="flex justify-center gap-4 mt-6">
                     {allCategories.map((category) => (
-                        <label key={category} className="flex items-center space-x-2">
+                        <label key={category} className="flex text-lg items-center space-x-2">
                             <input
                                 type="checkbox"
                                 value={category}

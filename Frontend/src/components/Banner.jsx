@@ -1,5 +1,6 @@
 import React from 'react'
 import bookBanner from '../assets/bookBanner.jpg'
+import { Link } from 'react-router-dom'
 
 function Banner() {
     return (
@@ -9,20 +10,11 @@ function Banner() {
                     <div className='space-y-12'>
                         <h1 className='text-4xl font-bold'>Hello, welcomes here to learn something
                             <span className='text-pink-500'> new everyday!!!</span></h1>
-                        <p className='text-xl'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero pariatur reprehenderit dolorem iusto fuga est placeat quo tempore sunt, veniam expedita iste! Dolore, necessitatibus culpa. Ut culpa quo voluptas consequatur.</p>
-                        <label className="input validator flex items-center gap-2 p-2 border rounded-md bg-white dark:bg-gray-800">
-                            <svg className="h-[1em] opacity-50 text-gray-600 dark:text-gray-300" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                <g strokeLinejoin="round" strokeLinecap="round" strokeWidth="2.5" fill="none" stroke="currentColor">
-                                    <rect width="20" height="16" x="2" y="4" rx="2"></rect>
-                                    <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
-                                </g>
-                            </svg>
-                            <input type="email" placeholder="Email" required
-                                className="bg-transparent text-black dark:text-white placeholder-gray-500 dark:placeholder-gray-400 outline-none w-full" />
-                        </label>
-
+                        <p className='text-xl'>
+                            The BookVerse serves as the gateway to a vast collection of books across various genres. Users can explore featured books, browse by category, and discover new reads. With a seamless and user-friendly interface, visitors can easily navigate, view book details, and make purchases. Whether you're looking for fantasy, romance, or free books, BookVerse has something for every reader! 📚✨
+                        </p>
                     </div>
-                    <button className="mt-5 btn btn-secondary">Get Started</button>
+                    <Link to={'/signup'} className="mt-8 btn btn-secondary">Get Started</Link>
                 </div>
                 <div className='order-1 md:w-1/2'>
                     <img src={bookBanner} className='w-140 h-120' alt='not found'></img>

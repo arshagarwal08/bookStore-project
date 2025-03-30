@@ -61,9 +61,11 @@ function Freebook() {
         <>
             <div className='max-w-screen-2xl container mx-auto md:px-20 px-4'>
                 <div className='mb-10'>
-                    <h1 className='text-xl font-semibold'>Free Offered Courses</h1>
-                    <p>
-                        Here are all the free books available on our website the books are about sports, cooking, music, and there are also knowledgable books available. Please feel free to read the books from below free of cost.
+                    <br/>
+                    <h1 className='text-3xl font-semibold'>Explore our Free Books</h1>
+                    <br/>
+                    <p className='text-xl'>
+                    At BookVerse, we believe knowledge should be accessible to everyone! Dive into our free books, covering a range of topics from literature to self-improvement. Whether you're looking to enhance your skills or simply explore a new subject, our curated selection of free resources is here to guide you. Start learning today—no cost, just pure knowledge! 🚀
                     </p>
                 </div>
                 <Slider {...settings}>
